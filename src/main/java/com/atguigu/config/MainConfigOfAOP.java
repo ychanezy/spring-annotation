@@ -81,9 +81,9 @@ import com.atguigu.aop.MathCalculator;
  * 				2）、populateBean；给bean的各种属性赋值
  * 				3）、initializeBean：初始化bean；
  * 						1）、invokeAwareMethods()：处理Aware接口的方法回调
- * 						2）、applyBeanPostProcessorsBeforeInitialization()：应用后置处理器的postProcessBeforeInitialization（）
+ * 						2）、AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization()：应用后置处理器的postProcessBeforeInitialization（）
  * 						3）、invokeInitMethods()；执行自定义的初始化方法
- * 						4）、applyBeanPostProcessorsAfterInitialization()；执行后置处理器的postProcessAfterInitialization（）；
+ * 						4）、AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization()；执行后置处理器的postProcessAfterInitialization（）；
  * 				4）、BeanPostProcessor(AnnotationAwareAspectJAutoProxyCreator)创建成功；--》aspectJAdvisorsBuilder
  * 			7）、把BeanPostProcessor注册到BeanFactory中；
  * 				beanFactory.addBeanPostProcessor(postProcessor);
